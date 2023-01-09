@@ -36,3 +36,18 @@ $supermen = new Movie('supermen', 'lorem ipsum');
 var_dump($batman);
 var_dump($supermen);
 
+$batman->setVoto(4);
+echo '<br>';
+echo $batman->titolo;
+echo '<br>';
+echo $batman->voto;
+echo '<br>';
+echo $batman->trama;
+
+$supermen->setVoto(5);
+echo '<br>';
+echo $supermen->titolo;
+echo '<br>';
+echo $supermen->voto;
+echo '<br>';
+echo $supermen->trama;
