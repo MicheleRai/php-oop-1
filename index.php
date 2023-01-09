@@ -5,3 +5,34 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
    => all'interno della classe è definito un costruttore
    => all'interno della classe è definito almeno un metodo
 - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà -->
+<?
+class Movie {
+    public $titolo;
+    public $trama;
+    public $voto;
+
+    public function __construct($titolo, $trama)
+    {
+       $this->titolo = $titolo;
+       $this->trama = $trama;
+    }
+    public function setVoto ($voto) {
+
+        if (is_integer($voto) && $voto >= 0){
+            $this->voto = $voto;
+        }
+        return $voto;
+    }
+
+    public function getVoto() {
+        return $this->voto;
+    }
+}
+
+
+$batman = new Movie('batman', 'lorem ipsum');
+$supermen = new Movie('supermen', 'lorem ipsum');
+
+var_dump($batman);
+var_dump($supermen);
+
